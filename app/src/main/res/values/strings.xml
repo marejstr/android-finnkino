@@ -1,0 +1,107 @@
+<resources>
+
+    <string name="app_name">Finnkino elokuvat</string>
+    <string name="today">Tänään</string>
+    <string name="tomorrow">Huomenna</string>
+
+
+    <!-- activity_movie_detail -->
+
+    <string name="finnkino_button_text">Finnkino</string>
+    <string name="finnkino_button_undertext">Osta lippuja</string>
+    <string name="imdb_button_text">IMDb</string>
+    <string name="meta_button_text">Metacritic</string>
+    <string name="original_title_text">Alkuperäinen nimi</string>
+    <string name="genre_text">Lajityyppi</string>
+    <string name="running_time_text">Kesto</string>
+    <string name="director_text">Ohjaaja</string>
+    <string name="starring_text">Pääosissa</string>
+
+    <!-- header_list_item -->
+
+    <string name="date_tv">Päivämäärä</string>
+    <string name="location_tv">Alue</string>
+    <string name="start_tv">Aloitusaika</string>
+    <string name="age_tv">Ikäraja</string>
+    <string name="apply_button_text">Hae</string>
+    <string name="defaults_button_text">Oletus</string>
+
+    <!-- MovieDetailActivity -->
+
+    <string-array name="time_spinner">
+        <item>11:00</item>
+        <item>12:00</item>
+        <item>13:00</item>
+        <item>14:00</item>
+        <item>15:00</item>
+        <item>16:00</item>
+        <item>17:00</item>
+        <item>18:00</item>
+        <item>19:00</item>
+        <item>20:00</item>
+        <item>21:00</item>
+    </string-array>
+
+    <string-array name="rating_spinner">
+        <item>Kaikki</item>
+        <item>S</item>
+        <item>7</item>
+        <item>12</item>
+        <item>16</item>
+        <item>18</item>
+    </string-array>
+
+    <!-- menu main.xml -->
+
+    <string name="filter_menu_text">Rajaa</string>
+    <string name="refresh_menu_text">Päivitä</string>
+    <string name="settings_menu_text">Asetukset</string>
+
+    <!-- Preferences.xml -->
+
+    <string name="default_location_key">default_location</string>
+    <string name="default_location_name">1029</string>
+    <string-array name="location_names">
+        <item>Kaikki</item>
+        <item>Pääkaupunkiseutu</item>
+        <item>Espoo</item>
+        <item>Espoo: Omena</item>
+        <item>Espoo: Sello</item>
+        <item>Helsinki</item>
+        <item>Helsinki: Kinopalatsi</item>
+        <item>Helsinki: Tennispalatsi</item>
+        <item>Jyväskylä</item>
+        <item>Kuopio</item>
+        <item>Lahti</item>
+        <item>Lappeenranta</item>
+        <item>Oulu</item>
+        <item>Pori</item>
+        <item>Tampere</item>
+        <item>Tampere: Cine Atlas</item>
+        <item>Tampere: Plevna</item>
+        <item>Turku</item>
+        <item>Vantaa</item>
+    </string-array>
+
+    <string-array name="location_id">
+        <item>1029</item>
+        <item>1014</item>
+        <item>1012</item>
+        <item>1039</item>
+        <item>1038</item>
+        <item>1002</item>
+        <item>1031</item>
+        <item>1033</item>
+        <item>1015</item>
+        <item>1016</item>
+        <item>1017</item>
+        <item>1041</item>
+        <item>1018</item>
+        <item>1019</item>
+        <item>1021</item>
+        <item>1034</item>
+        <item>1035</item>
+        <item>1022</item>
+        <item>1013</item>
+    </string-array>
+</resources>

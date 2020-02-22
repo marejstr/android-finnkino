@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#fdc300</color>
+    <color name="colorPrimaryDark">#ed9e00</color>
+    <color name="colorAccent">#ffd600</color>
+    <color name="colorGrayTextOnYellow">#444444</color>
+    <color name="colorAppBarText">#444444</color>
+    <color name="colorTransparent">#00000000</color>
+    <color name="colorGradientHalf">#0d000000</color>
+    <color name="colorGradientStart">#1a000000</color>
+    <color name="colorDisabledButton">#1F000000</color>
+    <color name="colorDarkUI">#CE9300</color>
+</resources>

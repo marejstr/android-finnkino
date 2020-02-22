@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/detail_coordinator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    >
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/detail_appbar"
+        android:layout_height="200dp"
+        android:layout_width="match_parent"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        android:fitsSystemWindows="true"
+        >
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/detail_collapsing_toolbar"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:expandedTitleMarginBottom="185dp"
+            app:expandedTitleMarginStart="72dp"
+            app:contentScrim="?colorPrimary"
+            android:fitsSystemWindows="true"
+            >
+
+            <ImageView
+                android:id="@+id/detail_backdrop_iv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_collapseMode="parallax"
+                android:scaleType="centerCrop"
+                android:fitsSystemWindows="true"
+                />
+
+            <ImageView
+                android:id="@+id/youtube_play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_play_button"
+                android:padding="16dp"
+                android:layout_gravity="center"
+                app:layout_collapseMode="parallax"
+                android:clickable="true"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/toolbar_shadow"
+                android:fitsSystemWindows="true"
+                app:layout_collapseMode="parallax"
+                />
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/detail_main_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@null"
+                app:layout_collapseMode="pin"
+                >
+
+                <ImageSwitcher
+                    android:id="@+id/detail_back_button_switcher"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="16dp"
+                    >
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </ImageSwitcher>
+
+                <TextSwitcher
+                    android:id="@+id/detail_toolbar_text_switcher"
+                    android:layout_centerInParent="true"
+                    android:textAlignment="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:lines="1"
+                        android:ellipsize="end"
+                        android:textColor="@color/colorGrayTextOnYellow"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:lines="1"
+                        android:ellipsize="end"
+                        android:textColor="@color/colorGrayTextOnYellow"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                        />
+
+                </TextSwitcher>
+
+                </android.support.v7.widget.Toolbar>
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/detail_nested_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="16dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="32dp"
+            >
+
+            <LinearLayout
+                android:id="@+id/list_item_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:minHeight="108dp"
+                >
+
+                <ImageView
+                    android:id="@+id/detail_icon_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    tools:src="@mipmap/ic_launcher"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp"
+                    >
+
+                    <TextView
+                        android:id="@+id/detail_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                        />
+
+                    <TextView
+                        android:id="@+id/detail_date_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+
+                    <TextView
+                        android:id="@+id/detail_theatre_auditorium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:background="#1F000000"
+                />
+
+            <android.support.v7.widget.GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                app:columnCount="5"
+                app:useDefaultMargins="true"
+                app:alignmentMode="alignBounds"
+                >
+
+                <ImageButton
+                    android:id="@+id/finnkino_button_detail"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/oval_ripple"
+                    android:src="@drawable/ic_tickets"
+                    android:elevation="2dp"
+                    android:stateListAnimator="@animator/raise_button"
+                    app:layout_gravity="center"
+                    app:layout_column="0"
+                    app:layout_row="0"
+                    />
+
+
+                <Space
+                    app:layout_column="1"
+                    app:layout_row="0"
+                    app:layout_columnWeight="1"
+                    />
+
+                <ImageButton
+                    android:id="@+id/imdb_button"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/square_selector"
+                    android:src="@drawable/ic_imdb_text_closer"
+                    android:elevation="2dp"
+                    android:stateListAnimator="@animator/raise_button"
+                    app:layout_gravity="center"
+                    app:layout_column="2"
+                    app:layout_row="0"
+                    />
+
+                <Space
+                    app:layout_column="3"
+                    app:layout_row="0"
+                    app:layout_columnWeight="1"
+                    />
+
+                <ImageButton
+                    android:id="@+id/meta_button"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/oval_ripple"
+                    android:src="@drawable/ic_metacriticonlym"
+                    android:elevation="2dp"
+                    android:stateListAnimator="@animator/raise_button"
+                    app:layout_gravity="center"
+                    app:layout_column="4"
+                    app:layout_row="0"
+                    />
+
+                <TextView
+                    android:text="@string/finnkino_button_undertext"
+                    app:layout_column="0"
+                    app:layout_row="1"
+                    app:layout_gravity="center"
+                    android:layout_width="90dp"
+                    android:gravity="center"
+                    />
+
+                <TextView
+                    android:id="@+id/imdb_rating_tv"
+                    tools:text="7.5"
+                    app:layout_column="2"
+                    app:layout_row="1"
+                    app:layout_gravity="center"
+                    android:layout_width="90dp"
+                    android:gravity="center"
+                    />
+
+                <TextView
+                    android:id="@+id/metascore_tv"
+                    tools:text="75"
+                    app:layout_column="4"
+                    app:layout_row="1"
+                    app:layout_gravity="center"
+                    android:layout_width="90dp"
+                    android:gravity="center"
+                    />
+
+            </android.support.v7.widget.GridLayout>
+
+
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#1F000000"
+                />
+
+            <com.ms.square.android.expandabletextview.ExpandableTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/expand_text_view"
+                android:layout_marginTop="16dp"
+                app:maxCollapsedLines="5"
+                >
+
+                <TextView
+                    android:id="@id/expandable_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="#666666"
+                    android:paddingBottom="8dp"
+                    />
+
+                <ImageButton
+                    android:id="@id/expand_collapse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:background="@android:color/transparent"
+                    />
+
+            </com.ms.square.android.expandabletextview.ExpandableTextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <ImageView
+                    android:id="@+id/rating_image_view"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_margin="8dp"
+                    tools:src="@mipmap/ic_launcher"
+                    />
+
+                <ImageView
+                    android:id="@+id/descriptor_image_view1"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_margin="8dp"
+                    android:visibility="invisible"
+                    />
+
+                <ImageView
+                    android:id="@+id/descriptor_image_view2"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_margin="8dp"
+                    android:visibility="invisible"
+                    />
+
+                <ImageView
+                    android:id="@+id/descriptor_image_view3"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_margin="8dp"
+                    android:visibility="invisible"
+                    />
+
+                <ImageView
+                    android:id="@+id/descriptor_image_view4"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_margin="8dp"
+                    android:visibility="invisible"
+                    />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="#1F000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                android:text="@string/original_title_text"
+                />
+
+            <TextView
+                android:id="@+id/detail_orginal_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Original title"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                android:text="@string/genre_text"
+                />
+
+            <TextView
+                android:id="@+id/detail_genre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                android:text="@string/running_time_text"
+                />
+
+            <TextView
+                android:id="@+id/detail_running_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                android:text="@string/director_text"
+                />
+
+            <TextView
+                android:id="@+id/detail_director"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                android:text="@string/starring_text"
+                />
+
+            <TextView
+                android:id="@+id/detail_actors"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+<!--
+            <ImageButton
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:scaleType="fitXY"
+                android:background="@drawable/oval_ripple"
+                android:elevation="2dp"
+                android:stateListAnimator="@animator/raise_button"
+                android:layout_margin="16dp"
+                android:layout_marginBottom="8dp"
+                />
+
+            <ImageButton
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:scaleType="fitXY"
+                android:background="@drawable/square_ripple"
+                android:elevation="2dp"
+                android:stateListAnimator="@animator/raise_button"
+                android:layout_margin="16dp"
+                />
+-->
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+</android.support.design.widget.CoordinatorLayout>
